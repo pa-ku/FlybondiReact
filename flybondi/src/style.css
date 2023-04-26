@@ -89,7 +89,6 @@ html[data-theme="dark"]{
   --footer-backG:#1a1818;
 }
 
-
 .header {
   position: fixed;
   display: flex;
@@ -114,8 +113,6 @@ html[data-theme="dark"]{
 --------------------------*/
 /* dark theme */
 
-
-
 /* boton theme */
 .label-theme-btn{
 width: 15px;
@@ -130,14 +127,13 @@ transition: 0.2s;
 scale:2;
 visibility: hidden;
 }
+
 .label-theme-btn:hover{
   scale: 1.1;
 
 }
 
-
 #nav-ctn {
-
   gap: 20px;
   display: flex;
   align-items: center;
@@ -149,21 +145,11 @@ visibility: hidden;
   text-decoration: none;
   transition: 0.2s;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .nav-btn:hover {
   color: var(--nav-btn-hover);
-}
-
-#nav-select {
-  padding: 0.2em 1em;
-  font-size: 15px;
-  border: 1px solid rgb(180, 180, 180);
-  border-radius: 8px;
-}
-
-#nav-select:focus-visible {
-  border: 1px solid var(--orange-flybondi);
 }
 
 .dropdown-mireserva-btn {
@@ -173,8 +159,6 @@ visibility: hidden;
   border: none;
   font-size: 16px;
 }
-
-
 
 /* Focus para abrirlo como una ventana */
  .dropdown-mireserva-btn:focus-within >.dropdown-reserva {
@@ -189,10 +173,10 @@ visibility: hidden;
 .dropdown-mireserva-btn:focus-within>.dropdown-nav-btn {
   color: #f7b914;
 }
- 
 
 .dropdown-arrow {
-  font-size: 14px;
+  font-size:14px;
+  padding-left:5px;
 }
 
 .dropdown-reserva a:hover {
@@ -204,82 +188,38 @@ visibility: hidden;
   display: flex;
   visibility: hidden;
   position: absolute;
+  flex-wrap: nowrap;
   gap: 20px;
   flex-direction: column;
   background-color: var(--header-backG);
   padding: 20px 20px;
   border-radius: 10px;
+  width: auto;
   text-align: left;
   top: 45px;
   transform: translateX(-26%);
   box-shadow: 3px 3px 20px 1px #1f1f1f2a;
   scale: 0;
   transform-origin: 30% 0%;
-  transition: 0.3s scale ease-in-out;
+  transition: 0.3s  ease-in-out;
 }
 
-.dropdown-reserva:hover{
-  visibility: visible;
-  scale: 1;
+.country-dropdown-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  height: 20px;
+  gap: 0.2rem;
 }
 
-@key
-.dropdown-hoverZone{
-  background-color: red;
-  height: 100px;
-  width: 100px;
-}
-
-.dropdown-reserva a {
-  color: var(--component-text-clr);
-  text-decoration: none;
-  font-weight: 500;
-  z-index: 99;
-  cursor: pointer;
-
-}
-
-.dropdown-mireserva-anchor {
-  width: 250px;
-}
-
-.country-dropdown-anchor img {
-  transition: 0.3s;
-}
-
-.country-dropdown-anchor:hover img {
-  scale: 1.1;
-}
-
-#logo-arg {
+.country-logo{
   width: 25px;
-  position: absolute;
-  left: -25px;
-}
-
-#logo-br {
-  width: 25px;
-  position: absolute;
-  left: 20px;
-}
-
-#logo-par {
-  width: 25px;
-  position: absolute;
-  left: 20px;
-  top: 60px;
-}
-
-#country-dropdown-nav-btn {
-  margin-left: 25px;
+display: flex;
 }
 
 #dropdown-country {
   left: -5px;
-}
-
-.country-dropdown-anchor {
-  padding-left: 32px;
 }
 
 /*-------------------------
@@ -290,7 +230,6 @@ visibility: hidden;
 
   padding-top: 55px;
 }
-
 
 /*-------------------------
           CAROUSEL
@@ -923,19 +862,18 @@ visibility: hidden;
 /* end Media */
 
 
-.footer-ctn-redes-anchor svg {
+.footer-ctn-redes-anchor *{
   scale: 1.2;
-  fill: #e1e1e1;
+  color: #e1e1e1;
+  fill: #fff;
   transition: 0.2s;
 
 }
 
-#Logo {
-  scale: 1.1;
-}
-
-.footer-ctn-redes-anchor:hover svg {
+.footer-ctn-redes-anchor:hover *{
   fill: var(--lightOrange-flybondi);
+  color: red;
+  
 }
 
 .footer-lineaDivisoria {
@@ -974,9 +912,10 @@ visibility: hidden;
   position: relative;
   width: 100%;
   justify-content: right;
-  /* posicion del boton */
+  
   display: none;
-  /* display flex en mobile */
+
+
 }
 
 .burgerIcon {
@@ -1004,6 +943,9 @@ visibility: hidden;
   z-index: 10;
   display: flex;
   transition: 0.4s ease-in-out;
+  text-align: right;
+  padding-right: 2rem;
+  gap: 20px;
   /* velocidad de apertura Menu */
 }
 
@@ -1045,26 +987,7 @@ visibility: hidden;
   top: 58px;
 }
 
-.btn-menu-dropdown {
-  text-align: center;
-  width: 100%;
-  font-size: 14px;
-  padding: 1em 2em;
-  background-color: white;
-  color: #333;
-  border: none;
-  font-weight: bold;
-  transition: 0.1s linear;
-  cursor: pointer;
-  outline: 0px solid;
-  text-decoration: none;
-  text-align: right;
-}
 
-.btn-menu-dropdown:hover {
-  color: white;
-  background-color: var(--orange-flybondi);
-}
 
 .burgerIcon .bar {
   display: inline-block;
