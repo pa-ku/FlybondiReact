@@ -20,7 +20,7 @@ export default function Header() {
            
                 <button id='btn-dropdown' className="nav-btn dropdown-nav-btn">
                     <span>Mi Reserva</span> 
-                    <span>▼</span>
+                    <span className="dropdown-arrow">▼</span>
                     
                     <div className="dropdown-nav">
                         <BtnNav href='' text='Cambio de asiento'/>
@@ -64,7 +64,7 @@ function BotonDropdown(){
     <button className="nav-btn dropdown-nav-btn" id="country-dropdown-nav-btn">
     <img className="country-logo" src={imgArg} alt="logo argentina"/> 
     <span> Arg/$</span>
-    <span >▼</span>
+    <span className="dropdown-arrow">▼</span>
                     
                 <div className="dropdown-nav">
              <BtnNav href='' img=''

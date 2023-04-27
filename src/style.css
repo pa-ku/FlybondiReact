@@ -123,7 +123,7 @@ cursor: pointer;
 transition: 0.2s;
 }
 .label-btn-dropdown{
-
+ 
   width: 100%;
   height: 70px;
   display: flex;
@@ -178,7 +178,10 @@ visibility: hidden;
   scale: 1;
 }
 
+.dropdown-arrow {
+  font-size:13px;
 
+}
 
 .dropdown-nav a:hover {
   color: #f7b914;
