@@ -12,16 +12,17 @@ export default function Header() {
         <img src={svgLogo} id="logoFlybondi" alt="logo flybondi, boton inicio"/>
         <nav id="nav-ctn">
 
-            <label className="label-theme-btn" htmlFor="theme">
+            {/* <label className="label-theme-btn" htmlFor="theme">
                 <input type="checkbox" id="theme" className="change-theme-btn"></input>
-            </label>
+            </label> */}
 
-
-                <button className="nav-btn dropdown-mireserva-btn">
-                    <span className="dropdown-nav-btn">Mi Reserva</span> 
-                    <span className="dropdown-arrow">▼</span>
+            <label className='label-btn-dropdown' htmlFor="btn-dropdown">
+           
+                <button id='btn-dropdown' className="nav-btn dropdown-nav-btn">
+                    <span>Mi Reserva</span> 
+                    <span>▼</span>
                     
-                    <div className="dropdown-reserva">
+                    <div className="dropdown-nav">
                         <BtnNav href='' text='Cambio de asiento'/>
                         <BtnNav href='' text='Estado de mi reserva'/>
                         <BtnNav href='' text='Cambio de asiento'/>
@@ -29,6 +30,8 @@ export default function Header() {
                         <BtnNav href='' text='Check in'/>
                     </div>
                 </button>
+                </label>
+
 
             <BtnNav href='' text='Club'/>
             <BtnNav href='' text='Cargas'/>
@@ -55,15 +58,15 @@ function BtnNav(props){
 function BotonDropdown(){
     return(<>
     
+    <label className='label-btn-dropdown' htmlFor="country-dropdown-nav-btn">
         <span className='country-dropdown-wrapper'>
+    
+    <button className="nav-btn dropdown-nav-btn" id="country-dropdown-nav-btn">
     <img className="country-logo" src={imgArg} alt="logo argentina"/> 
-    <button className="nav-btn dropdown-mireserva-btn" id="country-dropdown-nav-btn">
-    <span className="dropdown-nav-btn"> Arg/$</span>
-    <span className="dropdown-arrow">▼</span>
+    <span> Arg/$</span>
+    <span >▼</span>
                     
-                <div className="dropdown-reserva" id="dropdown-country">
-             
-         
+                <div className="dropdown-nav">
              <BtnNav href='' img=''
               text= {[<span className='country-dropdown-wrapper'>
               <img className="country-logo" src={imgBr} alt="logo argentina"/> 
@@ -76,11 +79,10 @@ function BotonDropdown(){
              <p>Par/U$D</p>
              </span>]}/>
                     
-            
                 </div>
             </button>
             </span>
-
+            </label>
     </>)
 }
 
