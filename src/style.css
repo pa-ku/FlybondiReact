@@ -19,7 +19,7 @@ h2 {
 }
 
 :root {
-  --orange-flybondi-600: #d49c00;
+  --orange-flybondi-600: #eaa018;
   --orange-flybondi: #f7b914;
   --lightOrange-flybondi: #fed156;
   --nav-btn-hover:
@@ -222,7 +222,6 @@ visibility: hidden;
 display: flex;
 z-index: 0;
 user-select: none;
-user-drag: none;
 -webkit-user-drag: none;
 user-select: none;
 -moz-user-select: none;
@@ -234,91 +233,7 @@ user-select: none;
 /*-------------------------
           BANNER
 --------------------------*/
-.banner-ctn {
-  width: 100%;
 
-  padding-top: 55px;
-}
-
-/*-------------------------
-          CAROUSEL
---------------------------*/
-.section-carousel {
-  width: 100%;
-  height: 100%;
-  /* ancho imagen */
-}
-
-.carousel {
-  /* height: 32em; */
-  height: 450px;
-  width: 100%;
-  position: relative;
-}
-
-.carousel>ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.carousel-button {
-  background: none;
-  z-index: 2;
-  /* para ponerlo sobre los otros elementos */
-  position: absolute;
-  top: 50%;
-  /* Para centrar */
-  transform: translateY(-50%);
-  border: none;
-  font-size: 5em;
-  cursor: pointer;
-  color: #ffffffc6;
-  transition: 0.1s linear;
-}
-
-.carousel-button:hover,
-.carousel-button:hover {
-  color: #ffffff;
-
-}
-
-.carousel .next {
-  right: 30px;
-  width: 60px;
-}
-
-.prev {
-  left: 30px;
-  width: 60px;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
-
-}
-
-.slide-anchor{
-  width: 100%;
-  height: 100%;
- 
-  position: absolute;
-  cursor: pointer;
-  z-index: 1;
-}
-.slide[data-active] {
-  opacity: 1;
-}
-
-.slide>img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
 
 /*-------------------------
           Search Bar
@@ -331,35 +246,22 @@ user-select: none;
   padding-bottom: 20vh;
   margin-inline: 5%;
   z-index: 2;
-}
-
-#banner-ctn {
-  width: 100%;
-  height: 100%;
-}
-
-#banner-ctn img {
-  width: 100%;
-  height: 550px;
-  padding-top: 50px;
-  object-fit: cover;
-  object-position: center;
+  flex-direction: column;
+  top: -50px;
 }
 
 #seachBar-top-ctn {
-  position: absolute;
-  top: -99px;
+
   z-index: 99;
   background-color: #4f2d074f;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   width: 100%;
-
 }
 
 #seachBar-top-ctn button {
   border-right: 0px;
-  top: -99px;
+
   border-bottom: 0px;
   border-top: 0px;
   padding: 0.6em 2em;
@@ -403,7 +305,7 @@ user-select: none;
   height: 120px;
   width: 100%;
   border-radius: 0px 0px 20px 20px;
-  position: absolute;
+
   border-left: 12px solid var(--orange-flybondi);
   border-top: 6px solid var(--orange-flybondi);
 
@@ -485,13 +387,6 @@ user-select: none;
   justify-content: center;
   max-width: 280px;
   padding-right: 20px;
-}
-
-#seachBar-top-ctn {
-  position: absolute;
-  top: -98px;
-  z-index: 99;
-  background-color: #4f2d074f;
 }
 
 .searchBar-btn {
@@ -599,15 +494,13 @@ user-select: none;
 }
 
 .threeCards-anchor {
-  color: #eaa018;
+  color: var(--orange-flybondi-600);
   text-decoration: none;
   font-weight: 600;
 }
 
 .threeCards-anchor:hover {
-  color: rgb(255, 202, 103);
   text-decoration-line: underline;
-  font-weight: 600;
 }
 
 /*-------------------------
@@ -625,22 +518,18 @@ user-select: none;
     
     grid-template-columns: repeat(2, minmax(15rem, 24.5rem));
    
-  }
-  
-}
+  }}
 
 @media(max-width: 700px) {
   .libertad-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 100%));
     
-  }
-}
+  }}
 
 .libertadVolar-card {
   background-color: var(--cards-backG);
   border-radius: 20px;
   display: flex;
-
   flex-wrap: wrap;
   padding-bottom: 0.5rem;
   align-items: flex-start;
@@ -668,7 +557,6 @@ user-select: none;
   height: 80px;
   border-radius: 0;
   padding-top: 10px;
-
 }
 
 .libertadVolar-card p {
@@ -711,7 +599,6 @@ user-select: none;
   font-size: 16px;
   border: 0px solid gray;
   color: #333;
-
 }
 
 .element-fourCards-input:focus {
@@ -1159,22 +1046,7 @@ user-select: none;
     display: flex;
   }
 
-  /* Banner Carousel*/
-  #banner-ctn img {
-    width: 100%;
-    height: 500px;
-    flex-shrink: 1;
-  }
 
-  .carousel-button {
-    font-size: 2.5em;
-  }
-
-  .carousel {
-    height: 250px;
-    width: 100%;
-    position: relative;
-  }
 
   /* SearchBar */
   .searchBar-select-main-ctn {
@@ -1217,9 +1089,6 @@ user-select: none;
 @media (max-width:450px) {
 
   /* Carousel */
-  .carousel {
-    height: 220px;
-  }
 
   /* SearchBar */
   #vuelos {
@@ -1240,7 +1109,7 @@ user-select: none;
   }
 
   #seachBar-top-ctn {
-    margin-top: 30px;
+    margin-top: 45px;
    
   }
 
