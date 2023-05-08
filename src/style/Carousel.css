@@ -12,7 +12,7 @@ body{ margin:0;
   
   .inner {
     white-space: nowrap;
-    transition: transform 1s;
+    transition: 0.4s;
   }
   
   .carousel-item {

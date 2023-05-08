@@ -33,7 +33,7 @@ const Carousel = ({ children }) => {
             if (!paused) {
                 updateIndex(activeIndex + 1);
             }
-        }, 3000);
+        }, 10000);
 
         return () => {
             if (interval) {
@@ -64,7 +64,7 @@ const Carousel = ({ children }) => {
 
 <div className="indicator-arrow">
 <button className="indicator-arrow_btn" onClick={() => {updateIndex(activeIndex - 1);}}> « </button>
-<button className="indicator-arrow_btn"  onClick={() => {   updateIndex(activeIndex + 1);}}> » </button>
+<button className="indicator-arrow_btn" onClick={() => {updateIndex(activeIndex + 1);}}> » </button>
 </div>
 
             <div className="indicators">
