@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable"; //libreria para utilizar swipe en mobile
-
+import svgnNavigationArrow from '../../assets/icons/navigation-arrow.svg'
 import "../../style/Carousel.css";
+import styled from "styled-components";
 
+const NavigationArrow = styled.img`
+rotate:${(props) => props.rotate};
+width: 70px;
+transition: transform 0.5s;
+
+&:hover{
+   
+    transform: translate(5px);
+}
+
+`
 
 export const CarouselItem = ({ children, width, img }) => {
     return (
@@ -63,8 +75,18 @@ const Carousel = ({ children }) => {
             </div>
 
 <div className="indicator-arrow">
-<button className="indicator-arrow_btn" onClick={() => {updateIndex(activeIndex - 1);}}> « </button>
-<button className="indicator-arrow_btn" onClick={() => {updateIndex(activeIndex + 1);}}> » </button>
+
+
+<button className="indicator-arrow_btn" onClick={() => {updateIndex(activeIndex - 1);}}> 
+<NavigationArrow rotate="180deg" src={svgnNavigationArrow} alt="" />
+ </button>
+
+
+<button className="indicator-arrow_btn" onClick={() => {updateIndex(activeIndex + 1);}}> 
+<NavigationArrow src={svgnNavigationArrow} alt="" />
+ </button>
+
+
 </div>
 
             <div className="indicators">

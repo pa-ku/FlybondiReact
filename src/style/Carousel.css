@@ -43,11 +43,7 @@ body{ margin:0;
 .indicator-arrow_btn{
 background-color: #ffffff00;
 border: 0;
-font-size: clamp(4em,9vw,50em);
-color: #ffffffc0;
-transition: color 0.2s;
 cursor: pointer;
-
 }
 
 .indicator-arrow_btn:hover{

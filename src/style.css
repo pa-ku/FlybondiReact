@@ -19,11 +19,24 @@ h2 {
 }
 
 :root {
+  --white:#fff;  
+  
   --orange-flybondi-600: #eaa018;
   --orange-flybondi: #f7b914;
   --lightOrange-flybondi: #fed156;
-  --nav-btn-hover:
-    #e4af20;
+  --nav-btn-hover:#e4af20;
+    --color-background:#fff;
+    --color-boton:#333;
+  --header-backG:#fff;
+  --header-nav-btns:#666;
+  --searchBar-backG:#f4f3f3;
+  --searchBar-boxShadow:#b7b7b7;
+  --title-clr:#333; 
+  --component-title-clr:#222;
+  --component-text-clr:#666;
+  --cards-backG:#f4f3f3;
+  --newsletter-backG:#ebebeb;
+  --footer-backG:#222;
 }
 
 ::-webkit-scrollbar {
@@ -41,89 +54,12 @@ h2 {
 
 }
 
-html{
-  --color-background:#fff;
-  --color-boton:#333;
---header-backG:#fff;
---header-nav-btns:#666;
-
-
---searchBar-backG:#f4f3f3;
---searchBar-boxShadow:#b7b7b7;
-
-
-
---title-clr:#333; 
---component-title-clr:#222;
---component-text-clr:#666;
-
---cards-backG:#f4f3f3;
-
---newsletter-backG:#ebebeb;
---footer-backG:#222;
- 
-}
-
-html[data-theme="dark"]{
-  background-color: var(--color-background);
-  --color-background: #2b2b2b;
-  --color-boton:#fed156;
-  --header-backG:#222;
-  --header-nav-btns:#fff;
-
-
-
-  --searchBar-backG:#e6e6e6;
-  --searchBar-boxShadow:#222;
-
-
-
-  --title-clr:#f7f7f7; 
-  --component-title-clr:#f7f7f7;
-  --component-text-clr:#c3c3c3;
-
-
-  --cards-backG:#222;
-
-  --newsletter-backG:rgb(35, 33, 33);
-  --footer-backG:#1a1818;
-}
-
-.header {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--header-backG);
-  box-shadow: 2px 2px 10px 1px #3333333b;
-  z-index: 999;
-  width: 100%;
-  height: 3.5em;
-  top: 0px;
-  left: 0px;
-  padding-inline: 2em;
-}
-
-#logoFlybondi {
-  width: 150px;
-}
 
 /*-------------------------
           NAV
 --------------------------*/
-/* dark theme */
 
-/* boton theme */
-.label-theme-btn{
-width: 15px;
-height: 15px;
-border-radius: 50%;
-background: var(--color-boton);
-cursor: pointer;
-transition: 0.2s;
-}
 .label-btn-dropdown{
- 
   width: 100%;
   height: 70px;
   display: flex;
@@ -131,20 +67,10 @@ transition: 0.2s;
   justify-content: center;
   z-index: 5;
 }
-.change-theme-btn{
-scale:2;
-visibility: hidden;
-}
-
-.label-theme-btn:hover{
-  scale: 1.1;
-}
 
 #nav-ctn {
   gap: 20px;
   display: flex;
- 
-
 }
 
 .nav-btn {
@@ -163,12 +89,10 @@ visibility: hidden;
 }
 
 .dropdown-nav-btn {
-  position: relative;
-
-
   background-color: rgba(255, 255, 255, 0);
   border: none;
   font-size: 16px;
+position: relative;
 }
 
 
@@ -178,10 +102,6 @@ visibility: hidden;
   scale: 1;
 }
 
-.dropdown-arrow {
-  font-size:13px;
-
-}
 
 .dropdown-nav a:hover {
   color: #f7b914;
@@ -699,27 +619,6 @@ user-select: none;
 
 }
 
-.footer-card-title {
-  font-weight: 400;
-  margin: 0px;
-  padding-bottom: 10px;
-  font-size: 20px;
-
-}
-
-.footer-card-anchor {
-  color: #b3b3b3;
-  text-decoration: none;
-  transition: 0.2s;
-  font-weight: 300;
-  font-size: 16px;
-}
-
-.footer-card-anchor:hover {
-  color: var(--lightOrange-flybondi);
-}
-
-
 
 #footer-ctn-redes {
   display: flex;
@@ -732,72 +631,18 @@ user-select: none;
 /* mediafooter */
 @media(max-width: 600px) {
 
-  .footer-cards {
-    text-align: center;
-
-    align-items: center;
-    justify-content: center;
-  }
+ 
 
   #footer-ctn {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+   
   }
 
-  #footer-ctn-redes {
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  }
 }
 
-/* end Media */
 
-
-.footer-ctn-redes-anchor *{
-  scale: 1.2;
-  color: #e1e1e1;
-  fill: #fff;
-  transition: 0.2s;
-
-}
-
-.footer-ctn-redes-anchor:hover *{
-  fill: var(--lightOrange-flybondi);
-  color: red;
-  
-}
-
-.footer-lineaDivisoria {
-  background-color: rgb(137, 137, 137);
-  height: 0.5px;
-  margin-top: 10px;
-}
-
-#rightsFlybondi {
-
-  text-align: center;
-  height: 0px;
-  display: flex;
-
-  justify-content: center;
-  padding-top: 10px;
-}
-
-#rightsFlybondi img {
-  height: 25px;
-
-}
-
-#rightsFlybondi p {
-  font-weight: 300;
-  font-size: 14px;
-  color: #e1e1e1;
-}
 
 
 
