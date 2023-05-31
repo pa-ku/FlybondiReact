@@ -60,14 +60,16 @@ export default function Header() {
         <LogoFlybondi src={svgLogo} id="logoFlybondi" alt="logo flybondi, boton inicio"/>
 
         <CtnNav>
-        <GeneralButton href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*1intfug*_ga*MTQ2Mzg1MzM0Mi4xNjg1NDIyMDk2*_ga_1HGSJR4WPQ*MTY4NTQ5MjE1OS4yLjEuMTY4NTQ5MzM0MC42MC4wLjA." 
-        text="CheckIn" 
-        padding="6px 20px" 
-      
-        font="17px"
-        target="Blank_"/>
-     
 
+        <GeneralButton 
+        href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*1intfug*_ga*MTQ2Mzg1MzM0Mi4xNjg1NDIyMDk2*_ga_1HGSJR4WPQ*MTY4NTQ5MjE1OS4yLjEuMTY4NTQ5MzM0MC42MC4wLjA." 
+        text="Check in" 
+        padding="5px 15px"
+    
+        font="17px"
+        target="Blank_"
+        />
+     
             <LabelDropdown className='label-btn-dropdown' htmlFor="btn-dropdown">
                 <button id='btn-dropdown' className="nav-btn dropdown-nav-btn">
                     <span>Mi Reserva</span> 
@@ -77,7 +79,6 @@ export default function Header() {
                         <BtnNav href='' text='Estado de mi reserva'/>
                         <BtnNav href='' text='Cambio de asiento'/>
                         <BtnNav href='' text='Estado de vuelo'/>
-                        <BtnNav href='' text='Check in'/>
                     </div>
                 </button>
                 </LabelDropdown>

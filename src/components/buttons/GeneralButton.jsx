@@ -15,6 +15,7 @@ cursor: pointer;
 transition: 0.2s;
 box-shadow: 5px 7px 10px 0.5px #f0f0f0;
 text-decoration: none;
+white-space: nowrap;
 
 &:hover{
     background-color: var(--lightOrange-flybondi);
