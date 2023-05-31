@@ -14,24 +14,22 @@ const BtnRedes = styled.a`
 color: white;
 scale: 1.5;
 transition: 0.2s;
+
 &:hover{
 color: var(--orange-flybondi);
 }
-@media(max-width: 600px){
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-}`
+`
 
 
 const CtnRedes = styled.div`
   display: flex;
-  gap: 20px;
-
+    row-gap: 1.2em;
+    column-gap: 2em;
   flex-direction: column;
   margin-left: auto;
-@media(max-width: 600px) {
+  text-align: center;
+
+@media(max-width: 800px) {
     flex-direction: row;
     align-items: center;
     width: 100%;
@@ -44,7 +42,8 @@ display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
-  gap: 6px;
+  gap: 10px;
+
 @media(max-width: 600px){
     text-align: center;
 align-items: center;
@@ -58,16 +57,9 @@ text-decoration: none;
 transition: 0.2s;
 font-weight: 300;
 font-size: 16px;
-
 &:hover{
     color: var(--lightOrange-flybondi);
 }`
-
-const SectionTitle = styled.h2`
- font-weight: 400;
-  margin: 0px;
-  padding-bottom: 10px;
-  font-size: 20px;`
 
 
 const LineaDivisoria = styled.div`
@@ -75,32 +67,89 @@ const LineaDivisoria = styled.div`
   height: 0.5px;
   margin-top: 10px;
 `
-const RightsLogo = styled.img`
-  height: 25px;
-`
+
 const CtnRights = styled.div`
   text-align: center;
   height: 0px;
   display: flex;
-
   justify-content: center;
   padding-top: 10px;
 `
 
+const RightsLogo = styled.img`
+height: 25px;
+`
 
-export function LinkFooter(props){
+const Contenedor = styled.div`
+  padding: 2em 2em 1em 2em;
+  display: flex;
+  color: white;
+  flex-wrap: wrap;
+  column-gap: 70px;
+  row-gap: 40px;
+  column-gap: 6em;
+
+  @media(max-width: 600px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+`
+
+const Wrapper = styled.footer`
+ width: 100%;
+  height: 100%;
+  padding-bottom: 2em;
+  background-color: var(--footer-backG);
+`
+
+const CtnSomos = styled.div`
+max-width: 500px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+`
+
+const SectionTitle = styled.h2`
+ font-weight: 400;
+  padding-bottom: 10px;
+  font-size: ${props => props.font};
+  text-align:${props => props.align};
+  width:${props => props.width};
+  `
+
+const BtnConocenos = styled.a`
+ color: #b3b3b3;
+  text-decoration: none;
+  outline: 2px solid #b3b3b3;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  width: 100%;
+  transition: 0.2s;
+  text-align: center;
+  &:hover{
+    color: var(--lightOrange-flybondi);
+  outline: 2px solid var(--lightOrange-flybondi);
+
+  }
+`
+
+export function LinkFooter({ href,text }){
 return (
         <>
-        <BtnSection href={props.href}>{props.text}</BtnSection>
+        <BtnSection href={href}>{text}</BtnSection>
         </>
 )
 }
 
-function ColumTitleFooter(props){
+function ColumTitleFooter({ title }){
 return(
 <>
-                <SectionTitle>
-                    {props.title} 
+                <SectionTitle >
+                    {title} 
                 </SectionTitle>
 </>
 )
@@ -110,18 +159,18 @@ export default function Footer() {
   return (
    <>
    
-   <footer id="footer">
-        <div id="footer-ctn">
-            <div id="footer-somos-ctn">
-                <h2 id="footer-somos-title">
+   <Wrapper id="footer">
+        <Contenedor>
+            <CtnSomos>
+                <SectionTitle font="25px" align="left" width="100%">
                     Somos Flybondi
-                </h2>
+                </SectionTitle>
                 <p id="footer-somos-txt">
                     Somos los que no dejan que las distancias nos separen de los que más queremos. Somos los que hoy
                     estamos acá y mañana podemos estar allá. Somos la libertad de volar!
                 </p>
-                <a href="" id="footer-somos-btn">Conocenos!</a>
-            </div>
+                <BtnConocenos href="">Conocenos!</BtnConocenos>
+            </CtnSomos>
 
             <CtnSection>
                     <ColumTitleFooter title='Nosotros'/>
@@ -172,18 +221,16 @@ export default function Footer() {
                             <InstagramIcon></InstagramIcon>
                             </BtnRedes>
                     </CtnRedes>
-                 </div>
-
-  
-    
+            </Contenedor>
+                 
         <LineaDivisoria></LineaDivisoria>
 
         <CtnRights id="rightsFlybondi">
-           <a aria-label="link github" href="https://github.com/CiclistaSinLicencia?tab=repositories" target="_blank"> <RightsLogo src={imgOnedev} alt=""/></a>
+           <RightsLogo src={imgOnedev} alt=""/>
         </CtnRights>
 
 
-    </footer>
+    </Wrapper>
 
    
    </>

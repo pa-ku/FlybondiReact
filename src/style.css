@@ -71,6 +71,8 @@ h2 {
 #nav-ctn {
   gap: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-btn {
@@ -267,7 +269,7 @@ user-select: none;
   min-width: 180px;
   width: 100%;
   position: relative;
-
+  
 }
 
 .searchBar-logo-select {
@@ -552,57 +554,8 @@ user-select: none;
 /*-------------------------
           FOOTER
 --------------------------*/
-#footer {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 2em;
-  background-color: var(--footer-backG);
 
-}
 
-#footer-ctn {
-  padding: 2em 2em 1em 2em;
-  display: flex;
-  color: white;
-  flex-wrap: wrap;
-  column-gap: 70px;
-  row-gap: 40px
-}
-
-#footer-somos-ctn {
-  max-width: 500px;
-  min-width: 200px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#footer-somos-title {
-  font-weight: 400;
-  font-size: 25px;
-  width: 100%;
-  margin: 0;
-  text-align: left;
-}
-
-#footer-somos-btn {
-  color: #b3b3b3;
-  text-decoration: none;
-  outline: 2px solid #b3b3b3;
-  padding: 0.5em 1em;
-  border-radius: 20px;
-  width: 100%;
-  transition: 0.2s;
-  text-align: center;
-
-}
-
-#footer-somos-btn:hover {
-  color: var(--lightOrange-flybondi);
-  outline: 2px solid var(--lightOrange-flybondi);
-
-}
 
 #footer-somos-txt {
   font-size: 13px;
@@ -627,22 +580,6 @@ user-select: none;
   flex-direction: column;
   margin-left: auto;
 }
-
-/* mediafooter */
-@media(max-width: 600px) {
-
- 
-
-  #footer-ctn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-  }
-
-}
-
-
 
 
 
@@ -934,6 +871,8 @@ user-select: none;
 @media (max-width:450px) {
 
   /* Carousel */
+
+  
 
   /* SearchBar */
   #vuelos {

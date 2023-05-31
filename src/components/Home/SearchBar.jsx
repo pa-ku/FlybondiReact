@@ -1,4 +1,6 @@
 import React from 'react'
+import GeneralButton from '../buttons/GeneralButton'
+
 
 export default function SearchBar() {
   return (
@@ -93,7 +95,8 @@ export default function SearchBar() {
     </div>
 
     <div className="searchBar-ctn-btn">
-        <a href="https://flybondi.com/ar/search/destination?adults=1&children=0&currency=ARS&fromCityCode=BUE&infants=0" className="searchBar-btn">Buscar vuelos</a>
+  
+        <a href="https://flybondi.com/ar/search/destination?adults=1&children=0&currency=ARS&fromCityCode=BUE&infants=0" className="searchBar-btn">Buscar vuelos</a> 
     </div>
 
 </div>

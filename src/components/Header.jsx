@@ -5,6 +5,8 @@ import imgBr from '../assets/country/br.png'
 import imgPar from '../assets/country/par.png'
 import svgArrow from '../assets/icons/dropdown-arrow.svg'
 import styled from "styled-components";
+import GeneralButton from './buttons/GeneralButton'
+
 
 const DropdownArrow = styled.img`
 
@@ -43,7 +45,12 @@ const LabelDropdown = styled.label`
   justify-content: center;
   z-index: 5;
   `
-
+const CtnNav = styled.div`
+gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export default function Header() {
   return (
@@ -51,12 +58,15 @@ export default function Header() {
    
    <Head>
         <LogoFlybondi src={svgLogo} id="logoFlybondi" alt="logo flybondi, boton inicio"/>
-       
-        <nav id="nav-ctn">
 
-            {/* <label className="label-theme-btn" htmlFor="theme">
-                <input type="checkbox" id="theme" className="change-theme-btn"></input>
-            </label> */}
+        <CtnNav>
+        <GeneralButton href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*1intfug*_ga*MTQ2Mzg1MzM0Mi4xNjg1NDIyMDk2*_ga_1HGSJR4WPQ*MTY4NTQ5MjE1OS4yLjEuMTY4NTQ5MzM0MC42MC4wLjA." 
+        text="CheckIn" 
+        padding="6px 20px" 
+      
+        font="17px"
+        target="Blank_"/>
+     
 
             <LabelDropdown className='label-btn-dropdown' htmlFor="btn-dropdown">
                 <button id='btn-dropdown' className="nav-btn dropdown-nav-btn">
@@ -72,14 +82,13 @@ export default function Header() {
                 </button>
                 </LabelDropdown>
 
-
+              
             <BtnNav href='' text='Club'/>
             <BtnNav href='' text='Cargas'/>
             <BtnNav href='' text='Blog'/>
             <BtnNav href='' text='¿Preguntas?'/>
-
              <BotonDropdown/>
-        </nav>
+        </CtnNav>
       <DropdownMobile />
     </Head>
    </>
