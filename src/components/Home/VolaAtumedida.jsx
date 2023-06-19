@@ -6,34 +6,34 @@ import imgBlog from '../../assets/volaATuMedida/blog.webp'
 import SectionTitle from './SectionTitle'
 
 
-function FlyCard (props){
-return (
+function FlyCard(props) {
+  return (
     <>
-    <div className="fourCards">
-         <a href=""><img loading="lazy"src={props.img} alt=""/></a>
-        </div>
+      <div className="fourCards">
+        <a href=""><img loading="lazy" src={props.img} alt="" /></a>
+      </div>
     </>
-)
+  )
 }
 
 
 export default function VolaAtumedida() {
   return (
-   <>
-   <section>
-<SectionTitle title='Volá a tu medida'
-text='¡Elegí la opción que más te guste y preparate para despegar!'/>
+    <>
+      <section>
+        <SectionTitle title='Volá a tu medida'
+          text='¡Elegí la opción que más te guste y preparate para despegar!' />
 
-<div className="Component-FourCards">
-   
-<FlyCard img={imgUltrapase} />
-<FlyCard img={imgClubflybondi} />
-<FlyCard img={imgRevistasomos} /> 
-<FlyCard img={imgBlog} /> 
+        <div className="Component-FourCards">
 
-</div>
-</section>
-   
-   </>
+          <FlyCard img={imgUltrapase} />
+          <FlyCard img={imgClubflybondi} />
+          <FlyCard img={imgRevistasomos} />
+          <FlyCard img={imgBlog} />
+
+        </div>
+      </section>
+
+    </>
   )
 }

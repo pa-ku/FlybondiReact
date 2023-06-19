@@ -8,14 +8,14 @@ import React from 'react'
 
 export default function InfoSection() {
   return (
-<>
-<div className='InfoSection-Wrapper'>
-<FirstSection/>
-<VolaAtumedida/>
-<LibertadDevolar/>
-</div>
+    <>
+      <div className='InfoSection-Wrapper'>
+        <FirstSection />
+        <VolaAtumedida />
+        <LibertadDevolar />
+      </div>
 
-<Newsletter />
-</>
+      <Newsletter />
+    </>
   )
 }
