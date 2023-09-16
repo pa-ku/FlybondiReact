@@ -133,6 +133,15 @@ const BtnConocenos = styled.a`
   }
 `;
 
+
+const Author = styled.a`
+color: #b1b1b1;
+text-decoration: none;
+&:hover{
+color: #cf9fff;
+}
+`
+
 export function LinkFooter({ href, text }) {
   return (
     <>
@@ -233,7 +242,7 @@ export default function Footer() {
         <LineaDivisoria></LineaDivisoria>
 
         <CtnRights id="rightsFlybondi">
-          <RightsLogo src={imgOnedev} alt="" />
+          <Author href="https://pablokuhn.onedev.com.ar/">with 💜 by paku</Author>
         </CtnRights>
       </Wrapper>
     </>
